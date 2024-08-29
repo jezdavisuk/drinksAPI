@@ -16,17 +16,5 @@ public class HomeController {
         return "Welcome to the Drinks API!";
     }
 
-    @GetMapping("/coffeelover")
-    public String coffeeLover(){
-        return "I like coffee!";
-    }
 
-    @GetMapping("/coffee")
-    public HashMap<String,Object> coffee(@RequestParam(value="name",defaultValue = "latte") String name){
-        Integer id_count = 1;
-        HashMap<String,Object> coffeeLog = new HashMap<>();
-        coffeeLog.put("id", id_count++);
-        coffeeLog.put("name", name);
-        return coffeeLog;
-    }
 }
